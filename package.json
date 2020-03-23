@@ -1,0 +1,21 @@
+{
+  "name": "th-scoreboard-app",
+  "version": "0.1.0",
+  "description": "A scoreboard application created with `react` as a tutorial via teamtreehouse.com",
+  "main": "index.js",
+  "repository": "https://github.com/jldavis33/th-stopwatch-app.git",
+  "author": "Josh Davis <jldavis33@yahoo.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
