@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Stats = (props) => {
-    const playerCount = props.players.length;
+const Stats = ({players}) => {
+    const playerCount = players.length;
 
-    const totalPoints = props.players.reduce((scoreCount, player) => {
+    const totalPoints = players.reduce((scoreCount, player) => {
         return scoreCount + player.score
     }, 0);
 
