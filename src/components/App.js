@@ -29,12 +29,13 @@ class App extends Component {
         ]
     };
 
+    
 
     // player id counter
     prevPlayerId = 4;
 
     handleScoreChange = (delta, index) => {        
-        this.setState( (prevState) => {
+        this.setState( prevState => {
             return prevState.players[index].score += delta    
         });
     }
@@ -64,15 +65,24 @@ class App extends Component {
     }
 
     render() {
+        const isHighScore = (playerScore) => {
+            const scores = this.state.players.map(({ score }) => score);
+
+            return playerScore > 0 && playerScore === Math.max(...scores);
+        };
+        
+
         return (
             <div className="scoreboard">
                 <Header players={this.state.players} />
+                {/* Use Math.max({ listOfScores }) */}
 
                 {/* Players list */}
                 {this.state.players.map( (player, index) =>
                     <Player
                         name={player.name}
                         score={player.score}
+                        isHighScore={ isHighScore(player.score) }
                         id={player.id}
                         key={player.id.toString()}
                         index={index}
