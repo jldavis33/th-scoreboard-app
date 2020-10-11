@@ -10,7 +10,6 @@ class Player extends PureComponent {
         score: PropTypes.number,
         isHighScore: PropTypes.bool,
         index: PropTypes.number,
-        changeScore: PropTypes.func,
         removePlayer: PropTypes.func,
         id: PropTypes.number,
     }
@@ -21,7 +20,6 @@ class Player extends PureComponent {
             score,
             isHighScore,
             index,
-            changeScore,
             removePlayer,
             id
         } = this.props
@@ -37,7 +35,6 @@ class Player extends PureComponent {
                 <Counter 
                     score={score}
                     index={index}
-                    changeScore={changeScore}    
                 />
             </div>
         );
