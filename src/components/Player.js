@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 import Counter from './Counter.js';
 
 class Player extends PureComponent {
+
+    static propTypes = {
+        name: PropTypes.string,
+        score: PropTypes.number,
+        index: PropTypes.number,
+        changeScore: PropTypes.func,
+        removePlayer: PropTypes.func,
+        id: PropTypes.number,
+    }
+
     render() {
         const {
             name,
@@ -28,15 +38,6 @@ class Player extends PureComponent {
             </div>
         );
     }
-}
-
-Player.propTypes = {
-    name: PropTypes.string,
-    score: PropTypes.number,
-    index: PropTypes.number,
-    changeScore: PropTypes.func,
-    removePlayer: PropTypes.func,
-    id: PropTypes.number,
 }
 
 export default Player;
