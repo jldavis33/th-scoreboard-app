@@ -17,7 +17,6 @@ const PlayerList = (props) => {
                             id={player.id}
                             key={player.id.toString()}
                             index={index}
-                            removePlayer={props.handleRemovePlayer}
                         />
                     )}
                 </React.Fragment>
@@ -28,7 +27,6 @@ const PlayerList = (props) => {
 
 PlayerList.propTypes = {
     highScore: PropTypes.number,
-    removePlayer: PropTypes.func
 }
 
 export default PlayerList;

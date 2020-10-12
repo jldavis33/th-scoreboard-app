@@ -30,8 +30,6 @@ class App extends Component {
         ]
     };
 
-    
-
     // player id counter
     prevPlayerId = 4;
 
@@ -82,19 +80,14 @@ class App extends Component {
                 players: this.state.players,
                 actions: {
                     changeScore: this.handleScoreChange,
-                    removePlayer: this.handleRemovePlayer
+                    removePlayer: this.handleRemovePlayer,
+                    addPlayer: this.handleAddPlayer
                 }
             }}>
                 <div className="scoreboard">
                     <Header />
-                    <PlayerList 
-                        players={this.state.players}
-                        handleRemovePlayer={this.handleRemovePlayer}
-                        highScore={highScore}
-                    />
-                    <AddPlayerForm
-                        addPlayer={this.handleAddPlayer}
-                    />
+                    <PlayerList highScore={highScore} />
+                    <AddPlayerForm />
                 </div>
             </Provider>
         );
