@@ -9,7 +9,6 @@ class Player extends PureComponent {
     static propTypes = {
         name: PropTypes.string,
         score: PropTypes.number,
-        isHighScore: PropTypes.bool,
         index: PropTypes.number,
         id: PropTypes.number,
     }
@@ -18,7 +17,6 @@ class Player extends PureComponent {
         const {
             name,
             score,
-            isHighScore,
             index,
             id
         } = this.props
@@ -29,7 +27,7 @@ class Player extends PureComponent {
                     <div className="player">
                         <span className="player-name">
                             <button className="remove-player" onClick={() => context.actions.removePlayer(id)}>✖</button>
-                            <Icon isHighScore={isHighScore} />
+                            <Icon isHighScore={context.highScore === score} />
                             {name}
                         </span>
 

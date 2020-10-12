@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Icon = ({isHighScore}) => {
-
+const Icon = ({ isHighScore }) => {
     return (
         <svg className={isHighScore ? 'is-high-score' : null}
             viewBox="0 0 44 35">
