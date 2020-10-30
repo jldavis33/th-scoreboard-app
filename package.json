@@ -4,16 +4,20 @@
   "description": "A scoreboard application created with `react` as a tutorial via teamtreehouse.com",
   "main": "index.js",
   "repository": "https://github.com/jldavis33/th-stopwatch-app.git",
+  "homepage": "https://jldavis33.github.io/th-scoreboard-app",
   "author": "Josh Davis <jldavis33@yahoo.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
